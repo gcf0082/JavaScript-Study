@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+</head>
+<body onload="startTime()">
+    <!-- 试用toUTCString把当日的日期根据UTC转换为字符串 -->
+    <!--<p id="demo">XXX</p>
+    <button onclick="myFunction()">Try it</button>
+    <script>
+        function myFunction() {
+            var d = new Date();
+            var x = document.getElementById("demo");
+            x.innerHTML = d.toUTCString();
+        }
+    </script>-->
+
+    <!--使用getDay（）显示星期，而不仅仅是日期-->
+    <!--<p id="demo">XXX</p>
+    <button onclick="myFunction()">Try it</button>
+    <script>
+        function myFunction() {
+            var d = new Date();
+            var weekday = new Array(7);
+            weekday[0] = "Sunday";
+            weekday[1] = "Monday";
+            weekday[2] = "Tuesday";
+            weekday[3] = "Wednesday";
+            weekday[4] = "Thursday";
+            weekday[5] = "Firday";
+            weekday[6] = "Saturday";
+
+            var x = document.getElementById("demo");
+            x.innerHTML = weekday[d.getDay()];
+        }
+    </script>-->
+
+    <!--显示一个钟表-->
+    <!--<script>
+        function startTime() {
+            var today = new Date();
+            var h = today.getHours();
+            var m = today.getMinutes();
+            var s = today.getSeconds();
+            // add a zero in front of numbers<10
+            m = checkTime(m);
+            s = checkTime(s);
+            document.getElementById('txt').innerHTML = h + ":" + m + ":" + s;
+            t = setTimeout(function () { startTime() }, 500);
+        }
+        function checkTime(i) {
+            if (i < 10) {
+                i = "0" + i;
+            }
+            return i;
+        }
+    </script>
+    <div id="txt"></div>-->
+</body>
+</html>

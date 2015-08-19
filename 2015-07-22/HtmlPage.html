@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+</head>
+<body>
+    <script>
+        function foo() {
+            var rg = document.getElementByName("radioGroup");
+            for (var i = 0; i < rg.length; i++) {
+                if (rg[i].checked) {
+                    alert("您选择了第" + (i + 1) + "个单选框");
+                }
+            }
+            return false;
+        }
+    </script>
+    <form name="form1" onsubmit="return foo();">
+        <input type="radio" name="radioGroup" />
+        <input type="radio" name="radioGroup" />
+        <input type="radio" name="radioGroup" />
+        <input type="radio" name="radioGroup" />
+        <input type="radio" name="radioGroup" />
+        <input type="radio" name="radioGroup" />
+        <input type="submit" />
+    </form>
+    
+</body>
+</html>

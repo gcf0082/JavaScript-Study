@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <script src="JavaScript.js"></script>
+    <script src="jquery-1.7.1.min.js"></script>
+</head>
+<body>
+    <ul>
+        <li class="test">XXXXXXX</li>
+        <li class="test">XXXXXXXXXXXXXXXX</li>
+        <li>XXXXXXXXXXX</li>
+    </ul>
+    <button id="btn">Try it</button>
+    <script>
+        //function changeColor() {
+        //    var list = document.getElementsByTagName("li");
+        //    for (i = 0; i < list.length; i++) {
+        //        if (list[i].getAttribute("class") == "test") {
+        //            list[i].style.backgroundColor="yellow"
+        //        }
+        //    }
+        //}
+        $(document).ready(function () {
+            $("#btn").click(function () {
+                $("li.test").css("background-color", "yellow");
+            })
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+</head>
+<body>
+    <h2>typeof的返回类型</h2>
+    <script>
+        document.write("typeof(1): " + typeof (1) + "<br>");
+        document.write("typeof(NaN): " + typeof (NaN) + "<br>");
+        document.write("typeof(Number.MIN_VALUE)" + typeof (Number.MIN_VALUE) + "<br>");
+        document.write("typeof(Infinity)" + typeof (Infinity) + "<br>");
+        document.write("typeof(123)" + typeof (123) + "<br>");
+        document.write("typeof(true)" + typeof (true) + "<br>");
+        document.write("typeof(window)" + typeof (window) + "<br>");
+        document.write("typeof(document)" + typeof (document) + "<br>");
+        document.write("typeof(null)" + typeof (null) + "<br>");
+        document.write("typeof(eval)" + typeof (eval) + "<br>");
+        document.write("typeof(Date)" + typeof(Date) + "<br>");
+        document.write("typeof(sss)" + typeof(sss) + "<br>");
+        document.write("typeof(undefined)" + typeof(undefined) + "<br>");
+    </script>
+
+    <h2>运算中存在的隐式类型转换</h2>
+    <h3>"+"运算符</h3>
+    <script>
+        //当运算符“+”两边一个是数字类型，一个是字符串类型时，
+        //js引擎规定进行字符串连接运算而非算术加运算。
+        //利用运算符“+”这个特性，可以很方便的将Number转换成String。
+        var a = 11;
+        //alert(typeof a);
+        var a = a + "";
+        //alert(typeof a);
+    </script>
+
+    <h3>"-"运算符</h3>
+    <script>
+        //将String/转换成Number
+        var a = 11, b = '5';
+        var c = b - a;
+        //alert(typeof c);
+    </script>
+
+    <h3>spilt 分割字符串成为数组</h3>
+    <button onclick="spiltX()">Spilt</button>
+    <script>
+        function spiltX() {
+            str = "2,3,7,8,9,10";//  这是也给字符串
+            var strs = new Array();   // 这是一个数组
+
+            strs = str.spilt(",");//字符分割
+            for (i = 0; i < strs.length; i++) {
+                document.write(strs[i] + "<br>"); //分割后的字符串
+            }
+        }
+    </script>
+</body>
+</html>

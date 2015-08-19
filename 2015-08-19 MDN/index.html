@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <script src="example.js"></script>
+    <script src="Functions.js"></script>
+</head>
+<body>
+    <form name="selectForm">
+        <p><strong>Choose some music types, then click the button below:</strong>
+            <br />
+            <select name="musicTypes" multiple="multiple">
+                <option selected="selected">R&B</option>
+                <option selected="selected">Jazz</option>
+                <option>Blues</option>
+                <option>New Age</option>
+                <option>Classical</option>
+                <option>Opera</option>
+            </select>
+        </p>
+        <p>
+            <input type="button" value="How many are selected?" 
+                onclick="alert('Number of options selected: ' +　howMany(document.selectForm.musicTypes))"></input>
+        </p>
+    </form>
+</body>
+</html>

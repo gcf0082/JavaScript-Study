@@ -1,0 +1,103 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+</head>
+<body onload="checkCookie()">
+    <!--<script>
+        function writeText(txt) {
+            document.getElementById("desc").innerHTML = txt;
+        }
+    </script>-->
+
+    <!--错误处理-->
+    <!--<script>
+        var txt = "";
+        function message() {
+            try{
+                adddlert("Welcome guest!");
+            }
+            catch (err) {
+                txt = "本页面有一个错误。\n\n";
+                txt += "错误描述：" + err.message + "\n\n";
+                txt += "点击确定继续。\n\n";
+                alert(txt);
+            }
+        }
+    </script>
+    <input type="button" value="查看信息" onclick="message()" />-->
+
+
+    <!-- 带有确认框的错误处理机制 -->
+    <!--<script>
+        var txt = "";
+        function message() {
+            try{
+                addlert("Welcome guest!");
+            }
+            catch (err) {
+                txt = "There was an error on this page.\n\n";
+                txt += "Click OK to continue viewing this page,\n";
+                txt += "or Cancel to return to the home page.\n\n";
+                if (!confirm(txt)) {
+                    document.location.href = "http://www.baidu.com";
+                }
+            }
+        }
+    </script>
+    <input type="button" value="View message" onclick="message()" />-->
+
+    <!-- onerror事件 -->
+    <!--<script>
+        onerror = handleErr;
+        var txt = "";
+        function handleErr(msg, url, l) {
+            txt = "There was an error an this page.\n\n";
+            txt += "Error:" + msg + "\n";
+            txt += "URL:" + url + "\n";
+            txt += "Line:" + l + "\n";
+            txt += "Click OK to continur.\n\n";
+            alert(txt);
+            return true;
+        }
+        function message() {
+            addlert("Welcome guest!");
+        }
+    </script>
+    <input type="button" value="View message" onclick="message()" />-->
+
+    <!-- 创建一个欢迎Cookie -->
+    <script>
+        function setCookie(cname, cvalue, exdays) {
+            var d = new Day();
+            d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+            var expires = "expires=" + d.toGMTString();
+            document.cookie = cname + "=" + cvalue + ";" + expires;
+        }
+        function getCookie(cname) {
+            var name = cname + "=";
+            var ca = document.cookie.split(';');
+            for (var i = 0; i < ca.length; i++) {
+                var c = ca[i].trim();
+                if (c.indexOf(name) == 0)
+                    return c.substring(name.length, c.length);
+            }
+            return "";
+        }
+
+        function checkCookie() {
+            var user = getCookie("username");
+            if (user != "") {
+                alert("Welcome again" + user);
+            }
+            else {
+                user = prompt("Please enter your name:", "");
+                if (user != "" && user != null) {
+                    setCookie("usernmae", user, 30);
+                }
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+﻿ 
+<html> 
+<head> 
+<script>
+    function foo() {
+        // 在此处添加代码 
+        var rg = document.getElementsByName("radioGroup");
+        for (var i = 0; i < rg.length; i++) {
+            if (rg[i].checked) {
+                alert("你选择了第" + (i + 1) + "个单选框");
+            }
+        }
+        return false;
+    }
+</script> 
+</head> 
+<body> 
+<form name="form1" onsubmit="return foo();"> 
+<input type="radio" name="radioGroup" /> 
+<input type="radio" name="radioGroup" /> 
+<input type="radio" name="radioGroup" /> 
+<input type="radio" name="radioGroup" /> 
+<input type="radio" name="radioGroup" /> 
+<input type="radio" name="radioGroup" /> 
+<input type="submit" /> 
+</form> 
+</body> 
+</html> 

@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+</head>
+<body>
+    <script>
+        //function checkAll() {
+        //    for (var j = 1; j <= 9; j++) {
+        //        box = eval("document.checkboxform.C" + j);
+        //        box = eval("document.checkboxform.C" + j);
+
+        //        if (box.checked == false) { box.checked == true; }
+        //    }
+        //}
+        //function uncheckAll() {
+        //    for (var j = 1; j <= 9; j++) {
+        //        box = eval("document.checkboxform.C" + j);
+        //        if (box.checked == true) box.checked = false;
+        //    }
+        //}
+        //function switchAll() {
+        //    for (var j = 1; j <= 9; j++) {
+        //        box = eval("document.checkboxform.C" + j);
+        //        box.checked = !box.checked;
+        //    }
+        //}
+        function checkAll() {
+            for (var j = 1; j <= 9; j++) {
+                box = eval("document.checkboxform.C" + j); 
+                if (box.checked == false) box.checked = true;
+            }
+        }
+
+        function uncheckAll() {
+            for (var j = 1; j <= 9; j++) {
+                box = eval("document.checkboxform.C" + j); 
+                if (box.checked == true) box.checked = false;
+            }
+        }
+
+        function switchAll() {
+            for (var j = 1; j <= 9; j++) {
+                box = eval("document.checkboxform.C" + j); 
+                box.checked = !box.checked;
+            }
+
+    </script>
+    <form>
+        <input type="checkbox" name="C" checked />C1 
+        <input type="checkbox" name="C2" checked />C2 
+        <input type="checkbox" name="C3" checked />C3 
+        <input type="checkbox" name="C4" checked />C4 
+        <input type="checkbox" name="C5" checked />C5 
+        <input type="checkbox" name="C6" checked />C6 
+        <input type="checkbox" name="C7" checked />C7 
+        <input type="checkbox" name="C8" checked />C8 
+        <input type="checkbox" name="C9" checked />C9 
+        <input type="button" value="全部选中" onClick="checkAll()" />
+        <input type="button" value="全部不选" onClick="uncheckAll()" />
+        <input type="button" value="选择转换" onClick="switchAll()" />
+    </form>
+</body>
+</html>

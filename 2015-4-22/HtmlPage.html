@@ -1,0 +1,289 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+</head>
+<body>
+    <!--用JavaScript输出文本-->
+    <!--<script>
+        document.write(Date());
+    </script>-->
+
+    <!--JavaScript改变HTML文本内容-->
+    <!--<p id="demo">我的第一个段落。</p>
+    <script>
+        document.getElementById("demo").innerHTML = "段落已修改。";
+    </script>-->
+
+    <!--一个外部的JavaScript-->
+    <!--<p id="demo">一个段落</p>
+    <script src="myScript.js"></script>
+    <button type="button" onclick="myFunction()">点击这里</button>-->
+
+    <!--JavaScript变量-->
+    <!--<script>
+        var firstname;
+        firstname = "Hege";
+        document.write(firstname);
+        document.write("<br>");
+        firstname = "Tove";
+        document.write(firstname);
+    </script>-->
+
+    <!--JavaScript条件语句If...Else-->
+    <!--<p id="demo"></p>
+    <button type="button" onclick="myFunction()">点击这里</button>
+    <script>
+        function myFunction()
+        {
+            var x = "";
+            var time = new Date().getHours();
+            if (time < 20) {
+                x = "Good Day";
+            }
+            else {
+                x = "Good evening";
+            }
+            document.getElementById("demo").innerHTML = x;
+        }
+    </script>-->
+
+    <!--随机链接-->
+    <!--<p id="demo"></p>
+    <script>
+        var r = Math.random();
+        var x = document.getElementById("demo");
+        if (r > 0.5) {
+            x.innerHTML = "<a href='http://www.baidu.com'>Visit Baidu</a>";
+        }
+        else {
+            x.innerHTML = "<a href='http://www.wwf.org'>Visit WWF</a>";
+        }
+    </script>-->
+
+    <!-- Switch 语句 -->
+    <!--<p id="demo"></p>
+    <button type="button" onclick="myFunction()">点击这里</button>
+    <script>
+        function myFunction() {
+            var x;
+            var d = new Date().getDay();
+            switch (d) {
+                case 0:
+                    x = "Today it's sunday";
+                    break;
+                case 1:
+                    x = "Today it's Monday";
+                    break;
+                case 2:
+                    x = "Today it's Tuesday";
+                    break;
+                case 3:
+                    x = "Today it's Wednesday";
+                    break;
+                case 4:
+                    x = "Today it's Thursday";
+                    break;
+                case 5:
+                    x = "Today it's Firday";
+                    break;
+                case 6:
+                    x = "Today it's Saturday";
+                    break;
+            }
+
+            document.getElementById("demo").innerHTML = x;
+        }
+    </script>-->
+
+    <!-- JavaScript 消息框 -->
+<!--    <script>
+        function myFunction() {
+            alert("Hello!\n I am an alert box!");
+        }
+    </script>
+    <input type="button" onclick="myFunction()" value="Show alert box" />-->
+
+    <!--确认框-->
+   <!-- <p id="demo"></p>
+    <button type="button" onclick="myFunction()">Try it</button>
+    <script>
+        function myFunction() {
+            //var x;
+            var r = confirm("Press a button!");
+            //if (r = true) {
+            //    x = "You pressed OK!";
+            //}
+            //else {
+            //    x = "You pressed Cancel!";
+            //}
+            //document.getElementById("demo").innerHTML=x
+        }
+
+    </script>-->
+
+   <!-- 提示框-->
+    <!--<button onclick="myFunction()">Try it</button>
+    <p id="demo"></p>
+    <script>
+        function myFunction() {
+            var x;
+            var person = prompt("请输入你的名字", "Harry Potter");
+
+            if (person != null) {
+                x = "你好" + person + "!今天感觉如何？";
+                document.getElementById("demo").innerHTML = x;
+            }
+        }
+    </script>-->
+
+    <!-- 带有参数的提示框 -->
+    <!--<button onclick="myFunction('Harry Potter','Wizard')">Try it</button>
+    <script>
+        function myFunction(name, job) {
+            alert("Welcome" + name + ",the" + job);
+        }
+    </script>-->
+
+    <!--带有参数的提示框2-->
+    <!--<script>
+        function myFunction(txt)
+        {
+            alert(txt);
+        }
+    </script>
+    <form>
+        <input type="button" onclick="myFunction('Good Morning!')" value="In the Morning" />
+        <input type="button" onclick="myFunction('Good Evening!')" value="In the Evening" />
+    </form>-->
+
+    <!-- 带返回值的函数 -->
+    <!--<script>
+        function myFunction() {
+            return ("Hello srld!");
+        }
+    </script>
+    <script>
+        document.write(myFunction());
+    </script>-->
+
+   <!-- 带有参数和返回值的函数-->
+    <!--<button type="button" onclick="myFunction()">Try it</button>
+    <p id="demo"></p>
+    <script>
+        function myFunction(a, b)
+        {
+            return a * b;
+        }
+        document.getElementById("demo").innerHTML = myFunction(20, 10);
+    </script>-->
+
+    <!--Js循环-->
+    <!--<p id="demo"></p>
+    <button onclick="myFunction()">Try it</button>
+    <script>
+        function myFunction() {
+            var x = "", i;
+            for (i = 0; i < 5; i++) {
+                x = x + "The number is " + i + "<br>";
+            }
+            document.getElementById("demo").innerHTML = x;
+        }
+    </script>-->
+
+    <!--循环输出标题-->
+    <!--<p id="demo"></p>
+    <button onclick="myFunction()">Try it</button>
+    <script>
+        function myFunction() {
+            var x = "", i;
+            for (i = 1; i < 7; i++) {
+                x = x + "<h" + i + ">Heading" + i + "</h" + i + ">";
+            }
+            document.getElementById("demo").innerHTML = x;
+        }
+    </script>-->
+
+   <!-- while 循环-->
+    <!--<p id="demo"></p>
+    <button onclick="myFunction()">Try it</button>
+    <script>
+        function myFunction() {
+            var x = "", i=0;
+            while (i < 5) {
+                x = x + "The number is " + i + "<br>";
+                i++;
+            }
+            document.getElementById("demo").innerHTML = x;
+        }
+    </script>-->
+
+  <!--  do while循环-->
+   <!-- <p id="demo"></p>
+    <button onclick="myFunciton()">Try it</button>
+    <script>
+        function myFunciton() {
+            var x = "", i = 0;
+            do {
+                x = x + "The number is " + i + "<br>";
+                i++;
+            }
+            while (i < 5);
+            document.getElementById("demo").innerHTML = x;
+            }
+    </script>
+   -->
+
+    <!--break语句-->
+    <!--<p id="demo"></p>
+    <button onclick="myFunction()">Try it</button>
+    <script>
+        function myFunction() {
+            var x = "", i = 0;
+            for (i = 0; i < 10; i++)
+            {
+                if (i == 3) {
+                    break;
+                }
+                x = x + "The number is " + i + "<br>";
+            }
+            document.getElementById("demo").innerHTML = x;
+        }
+    </script>-->
+
+    <!--continue语句-->
+    <!--<p id="demo"></p>
+    <button onclick="myFunction()">Try it</button>
+    <script>
+        function myFunction() {
+            var x = "", i = 0;
+            for (i = 0; i < 10; i++) {
+                if (i == 3)
+                {
+                    continue;
+                }
+                x = x + "The number is" + i + "<br>";
+            }
+            document.getElementById("demo").innerHTML = x;
+        }
+    </script>-->
+
+    <!-- 试用for in 语句便利数组中的元素 -->
+    <p id="demo"></p>
+    <button onclick="myFunction()">Try it</button>
+    <script>
+        function myFunction() {
+            var x;
+            var txt = "";
+            var person = { fname: "Bill", lname: "Gates", age: 56 };
+            for (x in person) {
+                txt = txt + person[x];
+            }
+            document.getElementById("demo").innerHTML = txt;
+        }
+    </script>
+
+
+</body>
+</html>

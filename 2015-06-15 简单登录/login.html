@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head> 
+    <title>Login.html</title> 
+    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3"> 
+    <meta http-equiv="description" content="this is my page"> 
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"> 
+    <script src="js/jquery-1.8.1.min.js"></script>
+
+    <script type="text/javascript">
+        function checkuser() {
+            if ($('uname' == "lala") && $('pwd') == "123") {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        function $(id) {
+            return document.getElementById(id).value;
+        }
+     </script> 
+  </head> 
+<body>
+    <form action="ok.html"> 
+      u:<input type="text" id="uname"/><br> 
+      p:<input type="password" id="pwd"/><br> 
+      <input type="submit" value="登录" onclick="return checkuser()"/> 
+    </form> 
+</body>
+</html>

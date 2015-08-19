@@ -1,0 +1,354 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>xxxx</title>
+</head>
+<body>
+    <!-- 布尔对象 -->
+    <h2>布尔对象</h2>
+    <script>
+        var b1 = new Boolean(0);
+        var b2 = new Boolean(1);
+        var b3 = new Boolean("");
+        var b4 = new Boolean(null);
+        var b5 = new Boolean(NaN);
+        var b6 = new Boolean("true");
+
+        document.write("0 is boolean " + b1 + "<br>");
+        document.write("1 is boolean " + b2 + "<br>");
+        document.write("An empty string is boolean " + b3 + "<br>");
+        document.write("null is boolean " + b4 + "<br>");
+        document.write("NaN is boolean " + b5 + "<br>");
+        document.write("The string 'flase' is boolean " + b6 + "<br>");
+    </script>
+
+    <!-- Math 算数对象 -->
+    <h2>Math 算数对象</h2>
+    <p id="round">XXXXXXXXXXXXXX</p>
+    <button onclick="round()">Round</button>
+    <script>
+        function round() {
+            //document.getElementById("round").innerHTML = Math.round(2.5); // 四舍五入
+            //document.getElementById("round").innerHTML = Math.random();     // 返回0-1之间的随机数
+            //document.getElementById("round").innerHTML = Math.max(5, 10);   //返回最大数
+            //document.getElementById("round").innerHTML = Math.min(4, 10);     //返回最小数
+
+        } 
+    </script>
+
+    <h2>摄氏度和华氏度的转换</h2>
+    <script>
+        function convert(degree) {
+            if (degree == "C") {
+                F = document.getElementById("c").value * 9 / 5 + 32;
+                document.getElementById("f").value = Math.round(F);
+            }
+            else {
+                C = (document.getElementById("f").value - 32) * 5 / 9;
+                document.getElementById("c").value = Math.round(C);
+            }
+        }
+    </script>
+    <p>Insert a number into one of the input fields below:</p>
+    <form>
+        <input id="c" name="c" onkeyup="convert('C')" /> degrees Celsius<br />
+        equsls<br>
+        <input id="f" name="f" onkeyup="convert('F')" /> detrees Fahrenheit<br />
+        <p>Note that the <strong>Math.round()</strong>method is used,
+            so that the result will be returned as an integer.
+        </p>
+    </form>
+
+    <h2>在对象元素中使用for in 语句</h2>
+    <p id="person">点击下面的按钮，循环遍历对象"Person"的属性。</p>
+    <button onclick="person()">循环遍历</button>
+    <script>
+        function person() {
+            var x;
+            var txt = "";
+            var person = { fname: "Bill", lname: "Gates", age: 56 };
+
+            for (x in person) {
+                txt = txt + person[x];
+            }
+            document.getElementById("person").innerHTML = txt;
+        }
+    </script>
+
+    <!-- Window 对象 -->
+    <h2>Window 对象</h2>
+
+    <h3>弹出一个警告框</h3>
+    <script>
+        function alertX() {
+            //alert("Hello! I am an alert box!");
+            alert("Hello\nHow are you?");       //带折行的警告框
+        }
+    </script>
+    <input type="button" onclick="alertX()" value="Show alert box" />
+
+    <h3>弹出一个确认框</h3>
+    <p id="confirmX">XXXXXXXXXX</p>
+    <button onclick="confirmX()">确认框</button>
+    <script>
+        function confirmX() {
+            var x;
+            var r = confirm("Press a button!");
+            if (r == true) {
+                x = "You pressed OK!";
+            }
+            else {
+                x = "You pressed Cancel!";
+            }
+            document.getElementById("confirmX").innerHTML = x;
+        }
+    </script>
+
+    <h3>弹出一个提示框</h3>
+    <p id="prompt">XXXXXXX</p>
+    <button onclick="promptX()">提示框</button>
+    <script>
+        function promptX() {
+            var x;
+            var person = prompt("请输入你的名字", "Harry Potter");
+            if (person != null) {
+                x = "你好 " + person + "! 今天感觉如何？";
+                document.getElementById("prompt").innerHTML = x;
+            }
+        }
+    </script>
+
+    <h3>点击按钮，打开一个新窗口</h3>
+    <form>
+        <input type="button" value="Open Window" onclick="open_win()" />
+        <input type="button" value="Close Window" onclick="close_win()" />
+        <input type="button" value="Has 'myWindow' been closed?" onclick="check_win()" />
+        <br /><br />
+        <div id="msg">XXXXXXXXX</div>
+    </form>
+    <script>
+        function open_win() {
+            //window.open("http://www.baidu.com");
+            //window.open("http://www.microsoft.com");
+            //window.open("http://www.baidu.com", "_blank", "width=400,height=500"); //打开一个新窗口，并控制外形
+
+            myWindow = window.open('', '', 'width=500,height=700');
+            //myWindow.document.write("<p>This is 'myWindow'</p>");
+            //myWindow.focus();            //打开一个窗口，并获得焦点
+        }
+        function close_win() {
+            if (myWindow) {
+                myWindow.close();       //关闭窗口
+            }
+        }
+        function check_win() {
+            if (!myWindow.closed) {
+                document.getElementById("msg").innerHTML = "'myWindow' has never been closed!";
+            }
+            else {
+                if (myWindow.closed) {
+                    document.getElementById("msg").innerHTML = "'myWindow' has been closed!";
+                }
+                else {
+                    document.getElementById("msg").innerHTML = "'myWindow' has not been closed!";
+                }
+                
+            }
+        }
+
+    </script>
+
+    <h3>返回新窗口的名字</h3>
+    <input type="button" value="Open 'myWindow'" onclick="openWin()" />
+    <script>
+        var myWindow;
+        function openWin() {
+            myWindow = window.open('', 'MsgWindow', 'width=200,height=100');
+            myWindow.document.write("<p>This window's name is :" + myWindow.name + "</p>");
+        }
+    </script>
+
+    <h3>往父窗口返回一些元素</h3>
+    <input type="button" value="Open 'myWindow'" onclick="openWin2()" />
+    <script>
+        function openWin2() {
+            myWindow = window.open('', '', 'Width=200,height=100');
+            myWindow.document.write("<p>This is 'myWindow'</p>");
+            myWindow.focus();
+            myWindow.opener.document.write("<p>This is the source window!</p>");
+        }
+    </script>
+
+    <h3>移动新窗口</h3>
+    <script>
+        function openWin3() {
+            myWindow = window.open('', '', "width=200,height=200");
+            myWindow.document.write("<p>This is 'myWindow'</p>");
+        }
+        function moveWin() {
+            // myWindow.moveBy(250, 250);  移动新窗口
+            myWindow.moveTo(20, 20);     //移动新窗口到指定位置
+            myWindow.focus();
+        }
+    </script>
+    <input type="button" value="Open 'myWindow'" onclick="openWin3()" />
+    <input type="button" value="Move 'myWindow'" onclick="moveWin()" />
+
+    <h3>打印当前页面</h3>
+    <script>
+        function printpage() {
+            window.print();
+        }
+    </script>
+    <input type="button" value="Print this page" onclick="printpage()" />
+
+    <h3>创建一个时钟</h3>
+    <script>
+        function timedText() {
+            var x = document.getElementById('txt');
+            var t1 = setTimeout(function () { x.value = "2 seconds" }, 2000);
+            var t2 = setTimeout(function () { x.value = "4 seconds" }, 4000);
+            var t3 = setTimeout(function () { x.value = "6 seconds" }, 6000);
+        }
+    </script>
+    <form>
+        <input type="button" value="Display timed text!" onclick="timedText()" />
+        <input type="text" id="txt" />
+    </form>
+
+    <h3>用setTimeout设置和停止时钟</h3>
+    <script>
+        var c = 0;
+        var t;
+        var t;
+        var timer_is_on = 0;
+        function timedCount() {
+            document.getElementById('txtX').value = c;
+            c = c + 1;
+            t = setTimeout(function () { timedCount() }, 1000);
+        }
+        function doTimer() {
+            if (!timer_is_on)
+            {
+                timer_is_on = 1;
+                timedCount();
+            }
+        }
+        function stopTimer() {
+            clearTimeout(t);
+            timer_is_on = 0;
+        }
+    </script>
+    <form>
+        <input type="button" value="Start count!" onclick="doTimer()" />
+        <input type="text" id="txtX" />
+        <input type="button" value="Stop count!" onclick="stopTimer()" />
+    </form>
+
+    <h3>用setInterval()和clearInterval()设置定时器</h3>
+    <input type="text" id="clock" />
+    <button onclick="int=window.clearInterval(int)">停止</button>
+    <script>
+        var int = self.setInterval("clock()", 1000);
+        function clock() {
+            var d = new Date();
+            var t = d.toLocaleTimeString();
+            document.getElementById("clock").value = t;
+        }
+    </script>
+
+    <h2>document对象</h2>
+    <h3>使用document.write输出文本</h3>
+    <script>
+        document.write("孙礼锋，加油！");
+        document.write("<h3>孙礼锋，加油！</h3>");  输出HTML
+    </script>
+
+    <h3>返回锚的数量</h3>
+    <a name="html">HTML Tutorial</a>
+    <a name="css">Css Tutorial</a>
+    <a name="Js">Js Tutorial</a>
+    <img src="#" id="images1" alt="xxx" />
+    <img src="#" id="images2" alt="xXXX" />
+    <a href="#" id="XX" >XX</a>
+    <script>
+        document.write(document.anchors.length);   //返回锚的数量
+        document.write(document.anchors[0].innerHTML);   //返回第一个锚的内容
+        document.write("<br>");
+
+        document.write(document.forms.length);      //返回表单的数量
+        document.write(document.forms[0].name);     //返回第一个表单的内容
+        document.write("<br>");
+
+        document.write(document.images.length);    //返回照片的数量
+        document.write(document.images[0].id);    //返回第一张图片的id
+        document.write("<br>");
+
+        document.write(document.links.length);     //返回链接的数量
+        document.write(document.links[0].id);      //返回第一个链接的id
+        document.write("<br>");
+
+        document.write(document.cookie);          //返回Cookie
+        document.write("<br>");
+
+        document.write(document.domain);          //返回服务器的主机域名
+        document.write("<br>");
+
+        document.write(document.lastModified);    //最后一次修改时间
+        document.write("<br>");
+
+        document.write(document.referrer);        //返回域名
+        document.write("<br>");
+
+        document.write(document.title);    //返回标题
+        document.write("<br>");
+
+        document.write(document.URL);    //返回文档完整的URL
+        document.write("<br>");
+
+    </script>
+
+    <h3>打开输出流，向流中输出文本</h3>
+    <input type="button" value="NEW document" onclick="createDoc()" />
+    <script>
+        function createDoc() {
+            var doc = document.open("text/html", "replace");
+            var txt = "<!DOCTYPE html><html><body>Learning about the HTML DOM is fun!</body></html>";
+            doc.write(txt);
+            doc.close();
+        }
+    </script>
+    
+    <h3>write 和 writeIn的不同</h3>
+    <pre>
+    <script>
+        document.write("xxx");
+        document.write("XXXX");
+        document.writeln("XXX");
+        document.writeln("孙");
+    </script>
+        </pre>
+
+    <h3>用指定的ID弹出一个元素的innerHTML</h3>
+    <script>
+        function getValue() {
+            var x = document.getElementById("myHeader");
+            alert(x.innerHTML);
+        }
+    </script>
+    <h1 id="myHeader" onclick="getValue()">Clicffk me!</h1>
+
+    <h3>用指定的name弹出元素的数量</h3>
+    <script>
+        function getElements() {
+            var x = document.getElementByName("radi");
+            alert(x.length);
+        }
+    </script>
+    Cats:<input name="radi" type="radio" value="Cats" />
+    Dogs:<input name="radi" type="radio" value="Dogs" />
+    <input type="button" onclick="getElements()" value="Get ElementName" />
+
+</body>
+</html>

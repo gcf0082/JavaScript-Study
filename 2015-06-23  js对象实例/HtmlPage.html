@@ -1,0 +1,118 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+</head>
+<body>
+    <h1>Anchor对象</h1>
+    <h3>返回和设置链接用的charset属性</h3>
+    <a id="w3s" charset="ISO-8859-1" href="http://www.baidu.com">Wxx</a>
+    <script>
+        document.write("Retrun charset of link:");
+        document.write(document.getElementById('w3s').charset);
+        document.write("<br><br>");
+    </script>
+    <a id="google" href="HtmlPage.html">Google</a>
+    <script>
+        document.getElementById('google').charset = "utf-8";
+        document.write("Set charset of link to:");
+        document.write(document.getElementById('google').charset);
+    </script>
+
+    <h3>返回和设置href的属性</h3>
+    <p><a id="w3s1" href="HtmlPage.html" >XXXX</a></p>
+    <script>
+        document.write("Return href of link: ");
+        document.write(document.getElementById('w3s1').href);
+        document.write("<br><br>");
+    </script>
+    <a id="google1" href="HtmlPage.html">XXX</a>
+    <script>
+        document.getElementById('google1').href = "http://www.baidu.com";
+        document.write("Set href of link to: ");
+        document.write(document.getElementById('google1').href);
+    </script> 
+
+    <h3>返回一个锚的名字</h3>
+    <p><a href="#C6">See also Chapter 6</a></p>
+    <a id="C6" name="C6">Chapter 6</a>
+    <script>
+        document.write("Return name of anchor: ");
+        document.write(document.getElementById("C6").name);
+    </script>
+
+    <!--<h3>返回当前的文件和链接的文档之间的关系</h3>
+    <p><a id="fuuc" rel"</p>-->
+
+    <h3>改变元素的target属性</h3>
+    <a id="targetX" href="HtmlPage.html">Visit W3CSchool</a>
+    <br /><br />
+    <input type="button" onclick="changeTarget()" value="Change Target" />
+    <script>
+        function changeTarget() {
+            document.getElementById('targetX').target = '_blank';
+        }
+    </script>  
+    
+    <h3>返回一个链接的type 属性</h3>  
+    <p><a id="typeX" type="text/html" href="HtmlPage.html">W3CShool</a></p>
+    <script>
+        document.write("Return value of type attribute in link: ");
+        document.write(document.getElementById("typeX").type);
+    </script>
+
+    <h1>Area 对象</h1>
+    <h3>返回图像映射某个区域的替代文字</h3>
+    <img src="planets.gif" usermap="planetmap" />
+    <map name="planetmap">
+        <area id="venus" shape="circle" coords="124,58,8" alt="The XXXX" href="HtmlPage.html" />
+    </map>
+    <p>The alternate text for Venus is:
+        <script>document.write(document.getElementById("vennus").alt);
+        </script>
+    </p>
+
+    <h1>Form 对象</h1>
+    <h3>返回一个表单中所有元素的Value</h3>
+    <form id="frm1" action ="demo-form.html">
+        First name: <input type="text" name="fname" value="Donald"><br />
+        Last name: <input type="text" name="lname" value="Duck" /><br />
+        <input type="submit" value="Submit" />
+    </form>
+    <p>Retrun the value of each element in the form: </p>
+    <script>
+        var x = document.getElementById("frm1");
+        for (var i = 0; i < x.length; i++) {
+            document.write(x.elements[i].value);
+            document.write("<br>");
+        }
+    </script>
+
+    <h3>返回一个表单acceptCharset属性的值</h3>
+    <form id="frm2" accept-charset="ISO-8859-1">
+        First Name: <input type="text" name="fname" value="Donald" /><br />
+        Last Name: <input type="text" name="lname" value="Duck" />
+    </form>
+    <p>The value of the accept-charset attribute is:</p>
+    <script>
+        document.write(document.getElementById("frm2").acceptCharset);
+    </script>
+
+    <h3>重置表单</h3>
+    <p>Enter some text in the fields below, then press the 
+        "Reset form" button to reset the form.
+    </p>
+    <form id="frm5">
+        First name:<input type="text" name="fname" /><br />
+        Last name:<input type="text" name="lname" />
+        <input type="button" onclick="formReset()" value="Reset form" />
+    </form>
+    <script>
+        function formReset(){
+            document.getElementById("frm5").reset();
+        }
+    </script>
+
+</body>
+</html>

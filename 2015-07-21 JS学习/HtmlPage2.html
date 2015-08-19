@@ -1,0 +1,133 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+</head>
+<body>
+    <script>
+        //最简单的封装
+        var Person = {
+            name: "zhangsan",
+            getName: function () {
+                return this.name;
+            }
+        };
+        var n = Person.getName();
+
+        //隐藏私有变量
+        var info = {
+            name: "zhangsan",
+            age: 105
+        };
+        var Person = function (cfg) {
+            this.name = cfg.name || '';
+            function getName() {
+                return getName;
+            }
+        }
+
+        var name = Person.getName();
+
+        //this与构造函数
+        var Person = function (name) {
+            this.name = name;
+        };
+        Person.prototype.getName = function () {
+            return this.name;
+        };
+
+        var y = new Person('zhangsan');
+        var n = y.getName();
+        var s = '';
+        //以上以一个简单的应用，但是我们还可以理一理
+        (function () {
+            var Person = function (name) {
+                this.name = name;
+            };
+            Person.prototype.getName = function () {
+                return this.name;
+            };
+            var y = new Person('zhangsan');
+            var s0 = Person.constructor.constructor === Function;
+            var s1 = Person.constructor === Function;
+            var s2 = Person.prototype === Object;
+            var s3 = Person.prototype.constructor === Person;
+            var s4 = Person.constructor === Object;
+            var s5 = y.constructor === Person;
+
+            var s = '';
+        })
+    </script>
+    <script>
+        //获取页面中所有的checkbox怎么做
+        var domList = document.getElementsByTagName('input');
+        var checkBoxList = [];
+        var len = domList.length;
+        //缓存局部变量
+        while (len--) {
+            //使用while的效率会比for循环效率更高
+            if (domList[len].type == 'checkbox') {
+                checkBoxList.push(domList[len]);
+            }
+        }
+    </script>
+    <script>
+        var dom = document.getElementById("ID");
+        dom.innerHTML = "XXXXX";
+        dom.style.color = "#000";
+    </script>
+
+    <script>
+        function myfunction6() {
+            var a = new Object();
+            a.value = 1;
+            b = a;
+            b.value = 2;
+            alert(a.value);
+        }
+        
+    </script>
+    <button onclick="myfunction6()">xxx</button>
+    <script>
+        //数组降序排列
+        function myFunction() {
+            var points = [40, 100, 20, 30];
+            points.sort(function (a, b) { return b - a });
+            alert(points);
+        }
+    </script>
+    <script>
+        function getDay() {
+            var d = new Date();
+            //获取年，getFullYear()返回4位数字
+            var year = d.getFullYear();
+            //获取月，月份比较特殊，0是1月，11是12月
+            var month = d.getMonth() + 1;
+            //变成两位
+            month = month < 10 ? '0' + month : month;
+
+            //获取日
+            var day = d.getDate();
+            day = d.getDate();
+            day = day < 10 ? '0' + day : day;
+            alert(year + "-" + month + "-" + day);
+        }
+    </script>
+    <script>
+        function escapeHtml(str) {
+            return str.replace()
+        }
+    </script>
+    <script>
+        function strReverse(str) {
+            var a = str.split('');
+            var str1 = a.reverse().toString();
+            return str1;
+        }
+        var str = '123456';
+        console.log(strReverse(str));  //输出结果是6，5，4，3，2，1 
+        console.log(typeof strReverse(str));    //输出结果是string
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <script src="JavaScript.js"></script>
+    <title></title>
+</head>
+<body>
+   <!-- <button onclick="myFunction()">myFunction</button>-->
+    <table width="100%" >  
+    <tbody id="_table">  
+    </tbody>  
+  </table>  
+    //创建一个表格
+    <script>
+        var _row;
+        var _cell;
+
+        for (var i = 0; i < 1000; i++) {
+            _row = document.getElementById("_table").insertRow(0);
+            for (var j = 0; j < 10; j++) {
+                _cell = _row.insertCell(0);
+                _cell.innerText = "222";
+            }
+        }
+    </script>
+</body>
+</html>
