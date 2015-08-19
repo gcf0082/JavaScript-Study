@@ -56,3 +56,122 @@ function mapuse() {
 
 // window.onload = mapuse();
 
+// 函数递归 调用自身
+function factorial(n) {
+    if ((n == 0) || (n == 1)) {
+        return 1;
+    }
+    else
+        return (n * factorial(n - 1));
+}
+
+var a, b, c, d, e;
+a = factorial(1);  // 1
+b = factorial(2);  // 2
+c = factorial(3);  // 6
+d = factorial(4);  // 24
+e = factorial(5);  // 120
+
+
+// 函数的域
+// The following variables are defined in the global scope
+var num1 = 20,
+    num2 = 30,
+    name = "Chamahk";
+
+// This function is defined in the global scope
+function multiply() {
+    return num1 * num2;
+}
+
+multiply(); // 600
+// A nested function example
+function getScope() {
+    var num1 = 2,
+        num2 = 3;
+    function add() {
+        return name + " scored " + (num1 + num2);
+    }
+
+    return add();
+}
+
+getScope();  // Returns "Chamahk scored 5"
+
+// 作用域和函数堆栈
+// 递归 一个函数可以指向并调用自身。有三种方法可以达到这个目的：
+// 1、通过使用函数名
+// 2、使用arguments.callee
+// 3、使用作用域下的一个变量名指向函数
+
+var foo = function bar() {
+   // statements go here
+}
+
+// 以下语句是等阶的
+// bar()
+// arguments.callee()
+// foo()
+
+// 可以被转化成一个递归函数对其的调用
+function loop(x) {
+    if (x >= 10)
+        return;
+    // do stuff
+    loop(x + 1);  // the recursive call
+}
+loop(0);
+
+// 另一个递归
+function walkTree(node) {
+    if (node == null)
+        return;
+    // do something with node
+    for (var i = 0; i < node.childNodes.length; i++) {
+        walkTree(node.childNodes[i]);
+    }
+}
+
+// 类似堆栈行为
+function foo(i) {
+    if (i < 0)
+        return;
+    console.log("begin: " + i);
+    foo(i - 1);
+    console.log("end" + i);
+}
+
+// 嵌套函数和闭包
+// 嵌套函数是容器函数的私有成员。它自身也形成了一个闭包。一个闭包是一个可以拥有独立的环境与变量的表达式
+function addSquares(a, b) {
+    function square(x) {
+        return x * x;
+    }
+    return square(a) + square(b);
+}
+
+a = addSquares(2, 3);    // 13
+b = addSquares(3, 4);    // 25
+
+function outside(x) {
+    function inside(y) {
+        return x + y;
+    }
+    return inside;
+}
+
+fn_inside = outside(3);   // 变量状态保存
+result = fn_inside(5);
+result1 = outside(3)(5);
+
+// 多层嵌套函数
+function A(x) {
+    function B(y) {
+        function C(z) {
+            console.log(x + y + z);
+        }
+        C(3);
+    }
+    B(2);
+}
+A(1);  // logs 6( 1 + 2 + 3)
