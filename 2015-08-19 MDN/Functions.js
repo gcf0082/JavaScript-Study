@@ -175,3 +175,105 @@ function A(x) {
     B(2);
 }
 A(1);  // logs 6( 1 + 2 + 3)
+
+// 闭包
+var pet = function (name) {       // The outer function defines a variable called "name"
+    var getName = function () {   // The inner function has access to the "name" variable of the outer function
+        return nmae;
+    }
+    return getName;
+},
+myPet = pet("Vivie");
+myPet();              // Returns "Vivie"
+
+// 在上面的代码中，外部函数的name变量对内嵌函数来说是可取得的，
+// 而除了通过内嵌函数本身，没有其它任何方法可以取得内嵌的变量。内嵌函数的内嵌变量就像内嵌函数的保险柜。
+// 它们会为内嵌函数保留“稳定”——而又安全——的数据参与运行。
+// 而这些内嵌函数甚至不会被分配给一个变量，或者不必一定要有名字。
+var createPet = function (name) {
+    var sex;
+
+    return {
+        setName: function (newName) { 
+            name = newName;
+        },
+
+        getName: function () {
+            return name;
+        },
+
+        getSex: function () {
+            return sex;
+        },
+
+        setSex: function (newSex) {
+            if (typeof newSex == "string" && (newSex.toLowerCase() == "male" || newSex.toLowerCase() == "female")) {
+                sex = newSex;
+            }
+        }
+    }
+}
+
+var pet = createPet("Vivie");
+pet.getName();       // Vivie
+
+pet.setName("Oliver");
+pet.setSex("male");
+pet.getSex();          // male
+pet.getName();         // Oliver
+
+
+var getCode = (function () {
+    var secureCode = "0]Eal(eh&2";     // A code we do not want outsiders to be able to modify...
+
+    return function () {
+        return secureCode;
+    };
+})();
+
+getCode();   // return the secret code 
+
+// 如果一个闭包的函数用外部函数的变量名定义了同样的变量，那在外部函数域将
+// 再也无法指向该变量
+var createPet = function (name) {
+    return {
+        setName: function (name) {
+            name = name;
+        }
+    }
+}
+
+// 闭包中的神奇变量this是非常诡异的，因为this指代什么完全
+// 取决于函数在何处被调用，而不是在何处被定义。
+
+
+// 使用引数对象
+function myConcat(separator) {
+    var result = "", i;    // initialize list
+    // iterate through arguments
+    for (i = 0; i < arguments.length; i++) {
+        result += arguments[i] + separator;
+    }
+    return result;
+}
+
+// 给这个函数传递任何事数量的引数，它会将各个引数链接成一个字符串 "表"
+// returns "red,orange,blue,"
+myConcat(", ", "red", "orange", "blue");
+
+// elephant; giraffe; lion; cheetah;
+myConcat("; ", "elephant", "giraffe", "lion", "cheetah");
+
+// returns "sage. basil. oregano. pepper. parsley. "
+myConcat(". ", "sage", "basil", "oregano", "pepper", "parsley");
+
+// 预定义函数
+// eval函数
+// eval 函数对一串JavaScript代码字符求值，并且不限于特定的对象。eval的语法如下
+eval(expr);
+
+// isFinite函数
+// isFinite函数对引数求值，判断其是否为有限的数。
+// isFinite(number);
+
+// isNaN 函数,判断其是否为"NaN"
