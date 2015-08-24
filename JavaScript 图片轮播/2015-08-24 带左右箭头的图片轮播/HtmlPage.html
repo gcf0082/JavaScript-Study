@@ -1,0 +1,90 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <style type="text/css">
+        .rollBox{width:770px;height:260px;overflow:hidden;padding:10px;margin:0 auto;border:1px solid red;}
+        .rollBox .LeftBotton{height:40px;width:21px;
+                     background:url(images/scroll_bg.jpg) no-repeat 0 0;
+                     overflow:hidden;float:left;display:inline;margin:110px 0 0 0;cursor:pointer;
+}
+.rollBox .RightBotton{height:40px;width:21px;background:url(images/scroll_bg.jpg) no-repeat -43px 0px;overflow:hidden;float:left;display:inline;margin:110px 0 0 0;cursor:pointer;}
+.rollBox .Cont{width:726px;overflow:hidden;float:left;}
+.rollBox .ScrCont{width:10000000px;}
+.rollBox .Cont .pic{width:242px;float:left;text-align:center;}
+.rollBox .Cont .pic img{padding:9px;background:#fff;border:1px solid #ccc;display:block;margin:0 auto;width:190px;height:190px;}
+.rollBox .Cont .pic div{line-height:20px;color:#505050;margin:15px 0px;}
+.rollBox .Cont .pic div span{display:block;}
+.rollBox .Cont a:link,.rollBox .Cont a:visited{color:#626466;text-decoration:none;}
+.rollBox .Cont a:hover{color:#f00;text-decoration:underline;}
+.rollBox #List1,.rollBox #List2{float:left;}
+</style>
+</head>
+<body>
+ <div class="rollBox">
+     <div class="LeftBotton" onmousedown="ISL_GoUp()" onmouseup="ISL_StopUp()" onmouseout="ISL_StopUp()"></div>
+     <div class="Cont" id="ISL_Cont">
+         <div class="ScrCont">
+             <div id="List1">
+                 <!-- 图片列表 begin -->
+                 <div class="pic">
+                     <a href="javascript:;"><img src="images/1.jpg"  /></a>
+                     <div>
+                         <span><a href="javascript:;">酷站代码-特效1</a></span>
+                         <span>45446547</span>
+                     </div>
+                 </div>
+                 <div class="pic">
+                     <a href="javascript:;"><img src="images/2.jpg"  /></a>
+                     <div>
+                         <span><a href="javascript:;">酷站代码-特效1</a></span>
+                         <span>45446547</span>
+                     </div>
+                 </div>
+                 <div class="pic">
+                     <a href="javascript:;"><img src="images/3.jpg"  /></a>
+                     <div>
+                         <span><a href="javascript:;">酷站代码-特效1</a></span>
+                         <span>45446547</span>
+                     </div>
+                 </div>
+                 <div class="pic">
+                     <a href="javascript:;"><img src="images/4.jpg"  /></a>
+                     <div>
+                         <span><a href="javascript:;">酷站代码-特效1</a></span>
+                         <span>45446547</span>
+                     </div>
+                 </div>
+                 <div class="pic">
+                     <a href="javascript:;"><img src="images/5.jpg"  /></a>
+                     <div>
+                         <span><a href="javascript:;">酷站代码-特效1</a></span>
+                         <span>45446547</span>
+                     </div>
+                 </div>
+                 <div class="pic">
+                     <a href="javascript:;"><img src="images/6.jpg"  /></a>
+                     <div>
+                         <span><a href="javascript:;">酷站代码-特效1</a></span>
+                         <span>45446547</span>
+                     </div>
+                 </div>
+                 <div class="pic">
+                     <a href="javascript:;"><img src="images/7.jpg"  /></a>
+                     <div>
+                         <span><a href="javascript:;">酷站代码-特效1</a></span>
+                         <span>45446547</span>
+                     </div>
+                 </div>       
+                 <!-- 图片列表 end -->
+             </div>
+             <div id="List2"></div>
+         </div>
+     </div>
+     <div class="RightBotton" onmousedown="ISL_GoDown()" onmouseup="ISL_StopDown()" onmouseout="ISL_StopDown()"></div>
+   </div>
+
+    <script src="JavaScript2.js"></script>
+</body>
+</html>
