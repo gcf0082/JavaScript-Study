@@ -1,5 +1,5 @@
 #### JavaScript  变量作用域与变量提升
-[[参考地址]JavaScript Scoping and Hoisting](http://www.jb51.net/article/30718.htm)
+[[参考地址]JavaScript Scoping and Hoisting](http://www.jb51.net/article/30718.htm)<br>
 你知道下面的JavaScript代码执行后会alert出什么值吗？
 ```javascript
 var foo = 1;
@@ -22,7 +22,8 @@ function b(){
 b();
 alert(a);
 ```
-    浏览器会alert"1"。那么，到底是怎么了？这篇文章试着去解释这种JavaScript机制，但是首先，让我们对JavaScript的scoping做一些了解
+浏览器会alert"1"。那么，到底是怎么了？这篇文章试着去解释这种JavaScript机制，但是首先，让我们对JavaScript的scoping做一些了解
+    
 ##### Scoping in JavaScript
 JavaScript的scoping如此复杂的原因是因为它看上去非常像C系语言的成员。请看下面的C程序：
 ```C
