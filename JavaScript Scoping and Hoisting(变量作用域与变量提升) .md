@@ -102,6 +102,51 @@ x=1;
 return;
 y=1;
 }
+```
+注意到声明的赋值部分并没有被提升(hoist)。只有声明的名称被提升了。这和函数声明不同，函数声明中，整个函数体也都会被提升。但是请记住，声明一个函数一般来说有两种方式。考虑下面的JavaScript代码： <br>
+```javascript
+function test() {
+foo(); // TypeError "foo is not a function"
+bar(); // "this will run!"
+var foo = function () { // 函数表达式被赋值给变量'foo'
+alert("this won't run!");
+}
+function bar() { // 名为'bar'的函数声明
+alert("this will run!");
+}
+}
+test(); 
+```
+##### 特殊情况 名称解析顺序(Name Resolution Order)
+记住一个名称进入一个作用域一共有四种方式。我上面列出的顺序就是他们解析的顺序。总的来说，如果一个名称已经被定义了，他绝不会被另一个拥有不用属性的同名名称覆盖。这就意味着，函数声明比变量声明具有更高的优先级。但是这却不意味着对这个名称的赋值无效，仅仅是声明的部分会被忽略而已。但是有下面几个例外：<br>
+内置的名称arguments的行为有些怪异。他似乎是在形参之后，函数声明之前被声明。这就意味着名为arguments的形参会比内置的arguments具有更高的优先级，即使这个形参是undefined。这是一个不好的特性，不要使用arguments作为形参。<br>
+任何地方试图使用this作为一个标识都会引起语法错误，这是一个好的特性。<br>
+如果有多个同名形参，那位于列表最后的形参拥有最高的优先级，即使它是undefined。<br>
+##### 函数表达式 Name Function Expressions 
+你可以在函数表达式中给函数定义名称，就像函数声明的语句一样。但这并不会使它成为一个函数声明，并且这个名称也不会被引入到作用域中，而且，函数体也不会被提升(hoist)。这里有一些代码可以说明我说的是什么意思： 
+```javascript
+foo(); // TypeError "foo is not a function"
+bar(); // valid
+baz(); // TypeError "baz is not a function"
+spam(); // ReferenceError "spam is not defined"
+var foo = function () {}; // 匿名函数表达式('foo'被提升)
+function bar() {}; // 函数声明('bar'和函数体被提升)
+var baz = function spam() {}; // 命名函数表达式(只有'baz'被提升)
+foo(); // valid
+bar(); // valid
+baz(); // valid
+spam(); // ReferenceError "spam is not defined" 
+```
+##### How to Code With This Knowledge 
+现在你明白了作用域和提升，那么这对编写JavaScript代码意味着什么呢？最重要的一条是声明变量时总是使用var语句。我强烈的建议你在每个作用域中都只在最顶端使用一个var。如果你强制自己这么做，你永远也不会被提升相关的问题困扰。尽管这么做会使的跟踪当前作用域实际声明了哪些变量变得更加困难。我建议在JSLint使用onevar选项。如果你做了所有前面的建议，你的代码看起来会是下面这样： 
+```javascript
+/*jslint onevar: true [...] */
+function foo(a, b, c) {
+var x = 1,
+bar,
+baz = "something";
+} 
+```
 
 
 
