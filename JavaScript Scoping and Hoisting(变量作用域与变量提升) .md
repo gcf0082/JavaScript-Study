@@ -24,7 +24,7 @@ alert(a);
 ```
 浏览器会alert"1"。那么，到底是怎么了？这篇文章试着去解释这种JavaScript机制，但是首先，让我们对JavaScript的scoping做一些了解
     
-##### Scoping in JavaScript
+##### Scoping in JavaScript (变量作用域)
 JavaScript的scoping如此复杂的原因是因为它看上去非常像C系语言的成员。请看下面的C程序：
 ```C
 #inclue<stdio.h>
