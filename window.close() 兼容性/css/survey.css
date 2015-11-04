@@ -1,0 +1,1354 @@
+﻿/* so the window resize fires within a frame in IE7 */
+html, body {
+    height: 100%;    
+}
+
+a {
+	color: inherit;
+}
+
+p {
+	margin: 0px;
+}
+
+iframe {
+	background: #FFFFFF;
+}
+
+/* to match IE with C, FF */
+input {
+    padding: 1px 0px 1px 0px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+textarea {
+    margin: 0px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+
+body {
+  margin:0px;
+  background-image:none;
+  position:relative;
+  left:-0px;
+  width:781px;
+  margin-left:auto;
+  margin-right:auto;
+  text-align:left;
+}
+#base {
+  position:absolute;
+  z-index:0;
+}
+#u0 {
+  position:absolute;
+  left:30px;
+  top:240px;
+  width:720px;
+  height:10px;
+}
+#u0_start {
+  position:absolute;
+  left:0px;
+  top:-5px;
+  width:18px;
+  height:20px;
+}
+#u0_end {
+  position:absolute;
+  left:703px;
+  top:-5px;
+  width:18px;
+  height:20px;
+}
+#u0_line {
+  position:absolute;
+  left:0px;
+  top:5px;
+  width:720px;
+  height:1px;
+}
+#u1 {
+  position:absolute;
+  left:135px;
+  top:46px;
+  width:510px;
+  height:29px;
+  font-family:'Cambria Math Bold', 'Cambria Math';
+  font-weight:700;
+  font-style:normal;
+  font-size:30px;
+}
+#u1_img {
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:510px;
+  height:29px;
+}
+#u2 {
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:510px;
+  white-space:nowrap;
+}
+#u3 {
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:20px;
+  height:2210px;
+}
+#u3_img {
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:20px;
+  height:2210px;
+}
+#u4 {
+  position:absolute;
+  left:2px;
+  top:1097px;
+  width:16px;
+  visibility:hidden;
+  word-wrap:break-word;
+}
+#u5 {
+  position:absolute;
+  left:761px;
+  top:0px;
+  width:20px;
+  height:2210px;
+}
+#u5_img {
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:20px;
+  height:2210px;
+}
+#u6 {
+  position:absolute;
+  left:2px;
+  top:1097px;
+  width:16px;
+  visibility:hidden;
+  word-wrap:break-word;
+}
+#u7 {
+  position:absolute;
+  left:30px;
+  top:110px;
+  width:720px;
+  height:130px;
+  font-family:'Cambria Math Regular', 'Cambria Math';
+  font-weight:400;
+  font-style:normal;
+  font-size:14px;
+  line-height:24px;
+  padding-bottom:5px;
+  border-bottom:1px dashed #ccc;
+}
+#u7_img {
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:720px;
+  height:130px;
+}
+#u8 {
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:720px;
+  word-wrap:break-word;
+}
+#u9 {
+  position:absolute;
+  left:100px;
+  top:271px;
+  width:46px;
+  height:16px;
+  font-family:'Cambria Math Bold', 'Cambria Math';
+  font-weight:700;
+  font-style:normal;
+  font-size:14px;
+}
+#u9_img {
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:46px;
+  height:16px;
+}
+#u10 {
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:46px;
+  white-space:nowrap;
+}
+#u11 {
+  position:absolute;
+  left:161px;
+  top:270px;
+  width:200px;
+  height:25px;
+}
+#u11_input {
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:200px;
+  height:25px;
+  font-family:'Arial Normal', 'Arial';
+  font-weight:400;
+  font-style:normal;
+  font-size:13px;
+  text-decoration:none;
+  color:#000000;
+  text-align:left;
+}
+
+#u11_tip {
+    top:273px;
+}
+#u14_tip {
+    top:312px;
+}
+#u17_tip {
+    top:352px;
+}
+#u34_tip {
+    top:392px;
+}
+#u35_tip {
+    top:432px;
+}
+.tip {
+    position:absolute;
+    left:370px;
+    color:red;
+}
+.tip em {
+    font-style:normal;
+}
+
+#u12 {
+  position:absolute;
+  left:94px;
+  top:315px;
+  width:52px;
+  height:16px;
+  font-family:'Cambria Math Bold', 'Cambria Math';
+  font-weight:700;
+  font-style:normal;
+  font-size:14px;
+}
+#u12_img {
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:52px;
+  height:16px;
+}
+#u13 {
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:52px;
+  white-space:nowrap;
+}
+#u14 {
+  position:absolute;
+  left:161px;
+  top:309px;
+  width:200px;
+  height:25px;
+}
+#u14_input {
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:200px;
+  height:25px;
+  font-family:'Arial Normal', 'Arial';
+  font-weight:400;
+  font-style:normal;
+  font-size:13px;
+  text-decoration:none;
+  color:#000000;
+  text-align:left;
+}
+#u15 {
+  position:absolute;
+  left:30px;
+  top:353px;
+  width:116px;
+  height:16px;
+  font-family:'Cambria Math Bold', 'Cambria Math';
+  font-weight:700;
+  font-style:normal;
+  font-size:14px;
+}
+#u15_img {
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:116px;
+  height:16px;
+}
+#u16 {
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:116px;
+  white-space:nowrap;
+}
+#u17 {
+  position:absolute;
+  left:161px;
+  top:349px;
+  width:200px;
+  height:25px;
+}
+#u17_input {
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:200px;
+  height:25px;
+  font-family:'Arial Normal', 'Arial';
+  font-weight:400;
+  font-style:normal;
+  font-size:13px;
+  text-decoration:none;
+  color:#000000;
+  text-align:left;
+}
+#u18 {
+  position:absolute;
+  left:94px;
+  top:394px;
+  width:52px;
+  height:16px;
+  font-family:'Cambria Math Bold', 'Cambria Math';
+  font-weight:700;
+  font-style:normal;
+  font-size:14px;
+}
+#u18_img {
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:52px;
+  height:16px;
+}
+#u19 {
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:52px;
+  white-space:nowrap;
+}
+#u20 {
+  position:absolute;
+  left:70px;
+  top:434px;
+  width:76px;
+  height:16px;
+  font-family:'Cambria Math Bold', 'Cambria Math';
+  font-weight:700;
+  font-style:normal;
+  font-size:14px;
+}
+#u20_img {
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:76px;
+  height:16px;
+}
+#u21 {
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:76px;
+  white-space:nowrap;
+}
+#u22 {
+  position:absolute;
+  left:30px;
+  top:507px;
+  width:720px;
+  height:10px;
+}
+#u22_start {
+  position:absolute;
+  left:0px;
+  top:-5px;
+  width:18px;
+  height:20px;
+}
+#u22_end {
+  position:absolute;
+  left:703px;
+  top:-5px;
+  width:18px;
+  height:20px;
+}
+#u22_line {
+  position:absolute;
+  left:0px;
+  top:5px;
+  width:720px;
+  height:1px;
+}
+#u23 {
+  position:absolute;
+  left:30px;
+  top:714px;
+  width:720px;
+  height:10px;
+}
+#u23_start {
+  position:absolute;
+  left:0px;
+  top:-5px;
+  width:18px;
+  height:20px;
+}
+#u23_end {
+  position:absolute;
+  left:703px;
+  top:-5px;
+  width:18px;
+  height:20px;
+}
+#u23_line {
+  position:absolute;
+  left:0px;
+  top:5px;
+  width:720px;
+  height:1px;
+}
+#u24 {
+  position:absolute;
+  left:30px;
+  top:477px;
+  width:720px;
+  height:20px;
+  font-family:'Cambria Math Regular', 'Cambria Math';
+  font-weight:400;
+  font-style:normal;
+  color:#FF0000;
+  line-height:24px;
+  padding-bottom:20px;
+  border-bottom:1px dashed #ccc;
+}
+#u24_img {
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:720px;
+  height:20px;
+}
+#u25 {
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:720px;
+  word-wrap:break-word;
+  font-size:13px;
+}
+#u26 {
+  position:absolute;
+  left:32px;
+  top:537px;
+  width:720px;
+  height:27px;
+  font-family:'Cambria Math Bold', 'Cambria Math';
+  font-weight:700;
+  font-style:normal;
+  font-size:14px;
+  line-height:24px;
+}
+#u26_img {
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:720px;
+  height:27px;
+}
+#u27 {
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:720px;
+  word-wrap:break-word;
+}
+#u28 {
+  position:absolute;
+  left:30px;
+  top:580px;
+  width:239px;
+  height:16px;
+  font-family:'Cambria Math Regular', 'Cambria Math';
+  font-weight:400;
+  font-style:normal;
+  font-size:14px;
+}
+#u28_img {
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:239px;
+  height:16px;
+}
+#u29 {
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:239px;
+  word-wrap:break-word;
+}
+#u30 {
+  position:absolute;
+  left:30px;
+  top:606px;
+  width:339px;
+  height:25px;
+}
+#u30_input {
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:339px;
+  height:25px;
+  font-family:'Arial Normal', 'Arial';
+  font-weight:400;
+  font-style:normal;
+  font-size:13px;
+  text-decoration:none;
+  color:#000000;
+  text-align:left;
+}
+#u31 {
+  position:absolute;
+  left:30px;
+  top:641px;
+  width:52px;
+  height:27px;
+  font-family:'Cambria Math Regular', 'Cambria Math';
+  font-weight:400;
+  font-style:normal;
+  font-size:14px;
+  line-height:24px;
+}
+#u31_img {
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:52px;
+  height:27px;
+}
+#u32 {
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:52px;
+  word-wrap:break-word;
+}
+#u33 {
+  position:absolute;
+  left:30px;
+  top:670px;
+  width:720px;
+  height:25px;
+  padding-bottom:25px;
+  border-bottom:1px dashed #ccc;
+}
+#u33_input {
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:339px;
+  height:25px;
+  font-family:'Arial Normal', 'Arial';
+  font-weight:400;
+  font-style:normal;
+  font-size:13px;
+  text-decoration:none;
+  color:#000000;
+  text-align:left;
+}
+#u34 {
+  position:absolute;
+  left:161px;
+  top:389px;
+  width:200px;
+  height:25px;
+}
+#u34_input {
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:200px;
+  height:25px;
+  font-family:'Arial Normal', 'Arial';
+  font-weight:400;
+  font-style:normal;
+  font-size:13px;
+  text-decoration:none;
+  color:#000000;
+  text-align:left;
+}
+#u35 {
+  position:absolute;
+  left:161px;
+  top:429px;
+  width:200px;
+  height:25px;
+}
+#u35_input {
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:200px;
+  height:25px;
+  font-family:'Arial Normal', 'Arial';
+  font-weight:400;
+  font-style:normal;
+  font-size:13px;
+  text-decoration:none;
+  color:#000000;
+  text-align:left;
+}
+#u36 {
+  position:absolute;
+  left:32px;
+  top:742px;
+  width:720px;
+  height:27px;
+  font-family:'Cambria Math Bold', 'Cambria Math';
+  font-weight:700;
+  font-style:normal;
+  font-size:14px;
+  line-height:24px;
+}
+#u36_img {
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:720px;
+  height:27px;
+}
+#u37 {
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:720px;
+  word-wrap:break-word;
+}
+#u38 {
+  position:absolute;
+  left:32px;
+  top:771px;
+  width:100px;
+  height:16px;
+  font-family:'Cambria Math Regular', 'Cambria Math';
+  font-weight:400;
+  font-style:normal;
+  font-size:14px;
+}
+#u39 {
+  position:absolute;
+  left:16px;
+  top:0px;
+  width:82px;
+  word-wrap:break-word;
+}
+#u38_input {
+  position:absolute;
+  left:-3px;
+  top:-2px;
+}
+#u40 {
+  position:absolute;
+  left:32px;
+  top:798px;
+  width:720px;
+  height:16px;
+  font-family:'Cambria Math Regular', 'Cambria Math';
+  font-weight:400;
+  font-style:normal;
+  font-size:14px;
+  padding-bottom:25px;
+  border-bottom:1px dashed #ccc;
+}
+#u41 {
+  position:absolute;
+  left:16px;
+  top:0px;
+  width:82px;
+  word-wrap:break-word;
+}
+#u40_input {
+  position:absolute;
+  left:-3px;
+  top:-2px;
+}
+#u42 {
+  position:absolute;
+  left:30px;
+  top:830px;
+  width:720px;
+  height:10px;
+}
+#u42_start {
+  position:absolute;
+  left:0px;
+  top:-5px;
+  width:18px;
+  height:20px;
+}
+#u42_end {
+  position:absolute;
+  left:703px;
+  top:-5px;
+  width:18px;
+  height:20px;
+}
+#u42_line {
+  position:absolute;
+  left:0px;
+  top:5px;
+  width:720px;
+  height:1px;
+}
+#u43 {
+  position:absolute;
+  left:30px;
+  top:860px;
+  width:720px;
+  height:27px;
+  font-family:'Cambria Math Bold', 'Cambria Math';
+  font-weight:700;
+  font-style:normal;
+  font-size:14px;
+  line-height:24px;
+}
+#u43_img {
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:720px;
+  height:27px;
+}
+#u44 {
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:720px;
+  word-wrap:break-word;
+}
+#u45 {
+  position:absolute;
+  left:32px;
+  top:889px;
+  width:100px;
+  height:16px;
+  font-family:'Cambria Math Regular', 'Cambria Math';
+  font-weight:400;
+  font-style:normal;
+  font-size:14px;
+}
+#u46 {
+  position:absolute;
+  left:16px;
+  top:0px;
+  width:82px;
+  word-wrap:break-word;
+}
+#u45_input {
+  position:absolute;
+  left:-3px;
+  top:-2px;
+}
+#u47 {
+  position:absolute;
+  left:32px;
+  top:916px;
+  width:168px;
+  height:16px;
+  font-family:'Cambria Math Regular', 'Cambria Math';
+  font-weight:400;
+  font-style:normal;
+  font-size:14px;
+}
+#u48 {
+  position:absolute;
+  left:16px;
+  top:0px;
+  width:150px;
+  word-wrap:break-word;
+}
+#u47_input {
+  position:absolute;
+  left:-3px;
+  top:-2px;
+}
+#u49 {
+  position:absolute;
+  left:32px;
+  top:943px;
+  width:720px;
+  height:16px;
+  font-family:'Cambria Math Regular', 'Cambria Math';
+  font-weight:400;
+  font-style:normal;
+  font-size:14px;
+ padding-bottom:20px;
+  border-bottom:1px dashed #ccc;
+}
+#u50 {
+  position:absolute;
+  left:16px;
+  top:0px;
+  width:150px;
+  word-wrap:break-word;
+}
+#u49_input {
+  position:absolute;
+  left:-3px;
+  top:-2px;
+}
+#u51 {
+  position:absolute;
+  left:30px;
+  top:977px;
+  width:720px;
+  height:10px;
+}
+#u51_start {
+  position:absolute;
+  left:0px;
+  top:-5px;
+  width:18px;
+  height:20px;
+}
+#u51_end {
+  position:absolute;
+  left:703px;
+  top:-5px;
+  width:18px;
+  height:20px;
+}
+#u51_line {
+  position:absolute;
+  left:0px;
+  top:5px;
+  width:720px;
+  height:1px;
+}
+#u52 {
+  position:absolute;
+  left:30px;
+  top:1007px;
+  width:720px;
+  height:27px;
+  font-family:'Cambria Math Bold', 'Cambria Math';
+  font-style:normal;
+  line-height:24px;
+}
+#u52_img {
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:720px;
+  height:27px;
+}
+#u53 {
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:720px;
+  word-wrap:break-word;
+}
+#u54 {
+  position:absolute;
+  left:32px;
+  top:1044px;
+  width:720px;
+  height:96px;
+  z-index:50;
+    padding-bottom:30px;
+  border-bottom:1px dashed #ccc;
+}
+#u54_input {
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:660px;
+  height:96px;
+  font-family:'Arial Normal', 'Arial';
+  font-weight:400;
+  font-style:normal;
+  font-size:13px;
+  text-decoration:none;
+  color:#000000;
+  text-align:left;
+}
+#u55 {
+  position:absolute;
+  left:30px;
+  top:1167px;
+  width:720px;
+  height:10px;
+}
+#u55_start {
+  position:absolute;
+  left:0px;
+  top:-5px;
+  width:18px;
+  height:20px;
+}
+#u55_end {
+  position:absolute;
+  left:703px;
+  top:-5px;
+  width:18px;
+  height:20px;
+}
+#u55_line {
+  position:absolute;
+  left:0px;
+  top:5px;
+  width:720px;
+  height:1px;
+}
+#u56 {
+  position:absolute;
+  left:30px;
+  top:1197px;
+  width:720px;
+  height:27px;
+  font-family:'Cambria Math Bold', 'Cambria Math';
+  font-style:normal;
+  line-height:24px;
+}
+#u56_img {
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:720px;
+  height:27px;
+}
+#u57 {
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:720px;
+  word-wrap:break-word;
+}
+#u58 {
+  position:absolute;
+  left:32px;
+  top:1234px;
+  width:660px;
+  height:96px;
+  z-index:40;
+  padding-bottom:30px;
+  border-bottom:1px dashed #ccc;
+}
+#u58_input {
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:660px;
+  height:96px;
+  font-family:'Arial Normal', 'Arial';
+  font-weight:400;
+  font-style:normal;
+  font-size:13px;
+  text-decoration:none;
+  color:#000000;
+  text-align:left;
+}
+#u59 {
+  position:absolute;
+  left:30px;
+  top:1360px;
+  width:720px;
+  height:10px;
+}
+#u59_start {
+  position:absolute;
+  left:0px;
+  top:-5px;
+  width:18px;
+  height:20px;
+}
+#u59_end {
+  position:absolute;
+  left:703px;
+  top:-5px;
+  width:18px;
+  height:20px;
+}
+#u59_line {
+  position:absolute;
+  left:0px;
+  top:5px;
+  width:720px;
+  height:1px;
+}
+#u60 {
+  position:absolute;
+  left:30px;
+  top:1390px;
+  width:720px;
+  height:27px;
+  font-family:'Cambria Math Bold', 'Cambria Math';
+  font-style:normal;
+  line-height:24px;
+}
+#u60_img {
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:720px;
+  height:27px;
+}
+#u61 {
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:720px;
+  word-wrap:break-word;
+}
+#u62 {
+  position:absolute;
+  left:32px;
+  top:1427px;
+  width:660px;
+  height:96px;
+  z-index:30;
+    padding-bottom:30px;
+  border-bottom:1px dashed #ccc;
+}
+#u62_input {
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:660px;
+  height:96px;
+  font-family:'Arial Normal', 'Arial';
+  font-weight:400;
+  font-style:normal;
+  font-size:13px;
+  text-decoration:none;
+  color:#000000;
+  text-align:left;
+}
+#u63 {
+  position:absolute;
+  left:30px;
+  top:1550px;
+  width:720px;
+  height:10px;
+}
+#u63_start {
+  position:absolute;
+  left:0px;
+  top:-5px;
+  width:18px;
+  height:20px;
+}
+#u63_end {
+  position:absolute;
+  left:703px;
+  top:-5px;
+  width:18px;
+  height:20px;
+}
+#u63_line {
+  position:absolute;
+  left:0px;
+  top:5px;
+  width:720px;
+  height:1px;
+}
+#u64 {
+  position:absolute;
+  left:30px;
+  top:1580px;
+  width:720px;
+  height:27px;
+  font-family:'Cambria Math Bold', 'Cambria Math';
+  font-weight:700;
+  font-style:normal;
+  font-size:14px;
+  line-height:24px;
+}
+#u64_img {
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:720px;
+  height:27px;
+}
+#u65 {
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:720px;
+  word-wrap:break-word;
+}
+#u66 {
+  position:absolute;
+  left:32px;
+  top:1617px;
+  width:660px;
+  height:96px;
+  z-index:10;
+    padding-bottom:30px;
+  border-bottom:1px dashed #ccc;
+}
+#u66_input {
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:660px;
+  height:96px;
+  font-family:'Arial Normal', 'Arial';
+  font-weight:400;
+  font-style:normal;
+  font-size:13px;
+  text-decoration:none;
+  color:#000000;
+  text-align:left;
+}
+#u67 {
+  position:absolute;
+  left:30px;
+  top:2041px;
+  width:720px;
+  height:10px;
+}
+#u67_start {
+  position:absolute;
+  left:0px;
+  top:-5px;
+  width:18px;
+  height:20px;
+}
+#u67_end {
+  position:absolute;
+  left:703px;
+  top:-5px;
+  width:18px;
+  height:20px;
+}
+#u67_line {
+  position:absolute;
+  left:0px;
+  top:5px;
+  width:720px;
+  height:1px;
+}
+#u68 {
+  position:absolute;
+  left:30px;
+  top:1770px;
+  width:740px;
+  height:50px;
+  font-family:'Cambria Math Regular', 'Cambria Math';
+  font-weight:400;
+  font-style:normal;
+  font-size:14px;
+  line-height:24px;
+}
+#u68_img {
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:740px;
+  height:50px;
+}
+#u69 {
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:740px;
+  word-wrap:break-word;
+}
+#u70 {
+  position:absolute;
+  left:30px;
+  top:1999px;
+  width:132px;
+  height:30px;
+  font-family:'Cambria Math Regular', 'Cambria Math';
+  font-weight:400;
+  font-style:normal;
+  font-size:14px;
+  line-height:24px;
+}
+#u70_img {
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:132px;
+  height:30px;
+}
+#u71 {
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:132px;
+  word-wrap:break-word;
+}
+#u72 {
+  position:absolute;
+  left:325px;
+  top:2093px;
+  width:130px;
+  height:40px;
+  
+}
+#u72_img {
+  position:absolute;
+  left:0px;
+  top:0px;
+
+}
+#u73 {
+  position:absolute;
+  left:2px;
+  top:10px;
+    width:130px;
+  height:40px;
+  word-wrap:break-word;
+  background:url(../images/u72.png) no-repeat;
+  cursor:pointer;
+  font-family:'Cambria Math Bold', 'Cambria Math';
+  font-weight:700;
+  font-style:normal;
+  font-size:17px;
+  text-align:center;
+  border:none;
+  border-radius:3px;
+}
+#u74 {
+  position:absolute;
+  left:30px;
+  top:1740px;
+  width:720px;
+  height:10px;
+}
+#u74_start {
+  position:absolute;
+  left:0px;
+  top:-5px;
+  width:18px;
+  height:20px;
+}
+#u74_end {
+  position:absolute;
+  left:703px;
+  top:-5px;
+  width:18px;
+  height:20px;
+}
+#u74_line {
+  position:absolute;
+  left:0px;
+  top:5px;
+  width:720px;
+  height:1px;
+}
+#u75 {
+  position:absolute;
+  left:30px;
+  top:1831px;
+  width:720px;
+  height:30px;
+  font-family:'Cambria Math Regular', 'Cambria Math';
+  font-weight:400;
+  font-style:normal;
+  font-size:14px;
+  line-height:24px;
+}
+#u75_img {
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:720px;
+  height:30px;
+}
+#u76 {
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:720px;
+  word-wrap:break-word;
+}
+#u77 {
+  position:absolute;
+  left:30px;
+  top:1861px;
+  width:710px;
+  height:109px;
+  font-family:'Cambria Math Regular', 'Cambria Math';
+  font-weight:400;
+  font-style:normal;
+  font-size:14px;
+  line-height:24px;
+    padding-bottom:6px;
+  border-bottom:1px dashed #ccc;
+}
+#u77_img {
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:710px;
+  height:109px;
+}
+#u78 {
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:710px;
+  word-wrap:break-word;
+}
+.text_tit {
+    font-family:'Cambria Math Bold', 'Cambria Math';font-weight:700;font-size:14px;
+}
+.text_state {
+   font-family:'Cambria Math Regular', 'Cambria Math';font-weight:400;font-size:13px;
+}
+
+.notice {
+    width:470px;
+    height:170px;
+    margin: 200px auto 0;
+    padding:30px 40px;
+    color:#333;
+    border:20px solid #ccebf8;
+    font:400 16px/24px "Cambria Math Regular" "Cambria Math";
+}
+
+.close_notice {
+    margin:80px 0 0 0;
+    text-align:center;
+    color:#666;
+}
+#close_time {
+    color:red;
+}
