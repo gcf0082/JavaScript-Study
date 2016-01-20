@@ -55,13 +55,19 @@ function HtmlDecode(text) {
 // 6、原生JavaScript时间日期格式转换
 Date.prototype.Format = function(formatStr) {
     var str = formatStr;
-    var Week = ['日'，
-        '一', '二', '三', '四', '五', '六'
-    ]；
+    var Week = ['日'，'一', '二', '三', '四', '五', '六']；
+
     str = str.replace(/yyy|YYYY/, this.getFullYear());
+
     str = str.replace(/yy|YY/, (this.getFullYear() % 100) > 9 ?
         (this.getYear() % 100).toString() : '0' + (this.getYear() % 100));
+
     str = str.replace(/MM/, (this.getMonth() + 1) > 9 ? (this.getMonth() + 1).toString() : '0' + (this.getMonth() + 1));
-    str=str.replace(/M/g,(this.getMonth()+1));
-    str=str.replace(/w|W/g,Week[this.getDay()]);
+
+    str = str.replace(/M/g, (this.getMonth() + 1));
+
+    str = str.replace(/w|W/g, Week[this.getDay()]);
+
+    str = str.replace(/dd|DD/, this.getDate() > 9 ? this.getDate().toString() : '0' +
+        this.getDate());
 }
