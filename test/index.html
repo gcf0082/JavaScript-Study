@@ -8,23 +8,44 @@
 <meta name="keywords" content="">
 <link href="" rel="stylesheet">
 <script type="text/javascript">
-	function myFunc(){
-    try{
-    	var code=60;
-    	if(code>60){
-    		throw "值太大";
-    	}else{
-    		throw "值太小";
-    	}
-    }
-    catch(err){
-    	alert(err);
-    }
+// 	function myFunc(){
+//     try{
+//     	var code=60;
+//     	if(code>60){
+//     		throw "值太大";
+//     	}else{
+//     		throw "值太小";
+//     	}
+//     }
+//     catch(err){
+//     	alert(err);
+//     }
+// }
+// myFunc();
+var Cat = {
+    name: "xiaolan",
+    sex: "man",
+    color: "yellow"
 }
-myFunc();
+delete Cat.name;
+Cat.sex=undefined;
+Cat.color=null;
+document.write("name属性是否存在："+Cat.hasOwnProperty("name")+"/n");
+document.write("name属性是否存在："+Cat.hasOwnProperty("sex")+"/n");
+document.write("name属性是否存在："+Cat.hasOwnProperty("color")+"/n");
 </script>
 </head>
 <body>
-    
+    <input type="text" id="changes" value="尝试改变我的属性">
+    <script type="text/javascript">
+        document.getElementById("changes").type="button";
+    </script>
+    <p id="changeColor">
+    	XXXXXXXXXXXXXX
+    </p>
+    <script type="text/javascript">
+    document.getElementById("changeColor").style.color="red";
+    document.write("\‘xx")
+    </script>
 </body>
 </html>
