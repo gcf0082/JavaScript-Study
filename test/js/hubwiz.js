@@ -123,42 +123,43 @@ var Sum = {
     name: "add",
     color: "red"
 }
-Object.prototype.add=function(){
+Object.prototype.add = function() {
     alert("Hello world!");
 }
 Sum.add();
 
-var Cat={
-    name:"miaoxingren",
-    color:"yellow",
-    eat:function(){
+var Cat = {
+    name: "miaoxingren",
+    color: "yellow",
+    eat: function() {
         alert("Hello world!");
     }
 }
-Object.prototype.type="animal";
-for(var x in Cat){
-    document.write(Cat[x]+"\n");
+Object.prototype.type = "animal";
+for (var x in Cat) {
+    document.write(Cat[x] + "\n");
 }
 
-var cat = new Array("miaoxingren","yellow");
+var cat = new Array("miaoxingren", "yellow");
 
 var arr = new Array(3);
 document.write(arr.length); // 
-arr[0]=1;
-arr[100]=2;
+arr[0] = 1;
+arr[100] = 2;
 document.write(arr.length); //
 
-var arr=[1,2,5,6,"sxc","Sunday",22];
-for(var i=0;i<arr.length;i++){
-    document.write("第"+i+"个:"+arr[i]+"\n");
+var arr = [1, 2, 5, 6, "sxc", "Sunday", 22];
+for (var i = 0; i < arr.length; i++) {
+    document.write("第" + i + "个:" + arr[i] + "\n");
 }
 
-function funName(someFun,someNum){
+function funName(someFun, someNum) {
     return someFun(someNum);
 }
-function sum(num){
-    return num+3;
+
+function sum(num) {
+    return num + 3;
 }
 
-var reslut=funName(sum,5);
+var reslut = funName(sum, 5);
 alert(reslut);
